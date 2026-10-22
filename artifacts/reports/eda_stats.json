@@ -1,0 +1,171 @@
+{
+  "monthly_revenue": {
+    "peak_month": "2011-11",
+    "peak_revenue": 1156205.61,
+    "lowest_month": "2011-02",
+    "lowest_revenue": 446084.92,
+    "total_revenue": 8887208.89
+  },
+  "customer_frequency": {
+    "n_customers": 4338,
+    "mean_freq": 4.27,
+    "median_freq": 2.0,
+    "p75_freq": 5.0,
+    "p90_freq": 9.0,
+    "p99_freq": 30.0,
+    "max_freq": 209,
+    "pct_single_tx": 34.42,
+    "pct_ge5_tx": 25.68
+  },
+  "recency": {
+    "recency_reference_date": "2011-12-09",
+    "mean_recency": 91.54,
+    "median_recency": 50.0,
+    "pct_active_within_30d": 39.05,
+    "pct_active_within_70d": 59.94,
+    "pct_active_within_90d": 66.69,
+    "pct_inactive_gt90d": 33.31
+  },
+  "monetary": {
+    "mean_revenue_per_customer": 2048.69,
+    "median_revenue_per_customer": 668.57,
+    "p75_revenue": 1660.6,
+    "p90_revenue": 3640.84,
+    "p99_revenue": 19780.49,
+    "max_revenue": 280206.02,
+    "gini_coefficient": 0.7158,
+    "top20pct_customers_revenue_share": 74.68
+  },
+  "aov": {
+    "mean_aov": 479.56,
+    "median_aov": 302.57,
+    "p90_aov": 820.78,
+    "p99_aov": 3847.79,
+    "max_aov": 168469.6
+  },
+  "geography": {
+    "top_countries_revenue": {
+      "United Kingdom": 7285024.64,
+      "Netherlands": 285446.34,
+      "EIRE": 265262.46,
+      "Germany": 228678.4,
+      "France": 208934.31,
+      "Australia": 138453.81,
+      "Spain": 61558.56,
+      "Switzerland": 56443.95,
+      "Belgium": 41196.34,
+      "Sweden": 38367.83
+    },
+    "uk_revenue_share": 84.62
+  },
+  "cancellations": {
+    "mean_monthly_cancel_rate_pct": 16.77,
+    "max_monthly_cancel_rate_pct": 20.15,
+    "peak_cancel_month": "2011-01"
+  },
+  "inter_purchase_time": {
+    "n_ipt_observations": 12425,
+    "median_ipt_days": 28.0,
+    "mean_ipt_days": 45.66,
+    "pct_ipt_lt30d": 53.33,
+    "pct_ipt_lt90d": 85.89,
+    "pct_ipt_gt90d": 14.11
+  },
+  "cohort_retention": {
+    "avg_month1_retention_pct": 22.6,
+    "avg_month3_retention_pct": 22.67,
+    "avg_month6_retention_pct": 23.8
+  },
+  "temporal_design": {
+    "cutoff=2011-08-31_horizon=60d": {
+      "cutoff": "2011-08-31",
+      "horizon_days": 60,
+      "horizon_end": "2011-10-30",
+      "n_eligible_customers": 1921,
+      "n_active_in_horizon": 1069,
+      "n_inactive": 852,
+      "pct_inactive": 44.35,
+      "data_covers_full_horizon": true
+    },
+    "cutoff=2011-08-31_horizon=70d": {
+      "cutoff": "2011-08-31",
+      "horizon_days": 70,
+      "horizon_end": "2011-11-09",
+      "n_eligible_customers": 1921,
+      "n_active_in_horizon": 1161,
+      "n_inactive": 760,
+      "pct_inactive": 39.56,
+      "data_covers_full_horizon": true
+    },
+    "cutoff=2011-08-31_horizon=90d": {
+      "cutoff": "2011-08-31",
+      "horizon_days": 90,
+      "horizon_end": "2011-11-29",
+      "n_eligible_customers": 1921,
+      "n_active_in_horizon": 1309,
+      "n_inactive": 612,
+      "pct_inactive": 31.86,
+      "data_covers_full_horizon": true
+    },
+    "cutoff=2011-09-30_horizon=60d": {
+      "cutoff": "2011-09-30",
+      "horizon_days": 60,
+      "horizon_end": "2011-11-29",
+      "n_eligible_customers": 2124,
+      "n_active_in_horizon": 1250,
+      "n_inactive": 874,
+      "pct_inactive": 41.15,
+      "data_covers_full_horizon": true
+    },
+    "cutoff=2011-09-30_horizon=70d": {
+      "cutoff": "2011-09-30",
+      "horizon_days": 70,
+      "horizon_end": "2011-12-09",
+      "n_eligible_customers": 2124,
+      "n_active_in_horizon": 1343,
+      "n_inactive": 781,
+      "pct_inactive": 36.77,
+      "data_covers_full_horizon": true
+    },
+    "cutoff=2011-09-30_horizon=90d": {
+      "cutoff": "2011-09-30",
+      "horizon_days": 90,
+      "horizon_end": "2011-12-29",
+      "n_eligible_customers": 2124,
+      "n_active_in_horizon": 1345,
+      "n_inactive": 779,
+      "pct_inactive": 36.68,
+      "data_covers_full_horizon": false
+    },
+    "cutoff=2011-10-31_horizon=60d": {
+      "cutoff": "2011-10-31",
+      "horizon_days": 60,
+      "horizon_end": "2011-12-30",
+      "n_eligible_customers": 2453,
+      "n_active_in_horizon": 1204,
+      "n_inactive": 1249,
+      "pct_inactive": 50.92,
+      "data_covers_full_horizon": false
+    },
+    "cutoff=2011-10-31_horizon=70d": {
+      "cutoff": "2011-10-31",
+      "horizon_days": 70,
+      "horizon_end": "2012-01-09",
+      "n_eligible_customers": 2453,
+      "n_active_in_horizon": 1204,
+      "n_inactive": 1249,
+      "pct_inactive": 50.92,
+      "data_covers_full_horizon": false
+    },
+    "cutoff=2011-10-31_horizon=90d": {
+      "cutoff": "2011-10-31",
+      "horizon_days": 90,
+      "horizon_end": "2012-01-29",
+      "n_eligible_customers": 2453,
+      "n_active_in_horizon": 1204,
+      "n_inactive": 1249,
+      "pct_inactive": 50.92,
+      "data_covers_full_horizon": false
+    }
+  }
+}

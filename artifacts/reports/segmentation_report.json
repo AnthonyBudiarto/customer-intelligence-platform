@@ -1,0 +1,93 @@
+{
+  "cutoff_date": "2011-09-30",
+  "n_customers_segmented": 3604,
+  "best_k": 2,
+  "best_silhouette": 0.4304,
+  "silhouette_scores": [
+    {
+      "k": 2,
+      "silhouette_score": 0.4304,
+      "inertia": 5684.534536758024
+    },
+    {
+      "k": 3,
+      "silhouette_score": 0.3485,
+      "inertia": 4260.360298588235
+    },
+    {
+      "k": 4,
+      "silhouette_score": 0.3729,
+      "inertia": 3223.090414309564
+    },
+    {
+      "k": 5,
+      "silhouette_score": 0.3388,
+      "inertia": 2746.287841582458
+    },
+    {
+      "k": 6,
+      "silhouette_score": 0.3297,
+      "inertia": 2413.520839681276
+    },
+    {
+      "k": 7,
+      "silhouette_score": 0.2847,
+      "inertia": 2170.5295159253237
+    },
+    {
+      "k": 8,
+      "silhouette_score": 0.282,
+      "inertia": 2004.013211381537
+    }
+  ],
+  "transform_stats": {
+    "frequency_original_skew": 9.651896399867343,
+    "monetary_original_skew": 18.213623428312744,
+    "frequency_log_skew": 1.3430284542020965,
+    "monetary_log_skew": 0.402143114773043
+  },
+  "segment_profiles": [
+    {
+      "cluster": 0,
+      "n_customers": 2305,
+      "recency_median": 116.0,
+      "recency_mean": 128.07,
+      "frequency_median": 1.0,
+      "frequency_mean": 1.56,
+      "monetary_median": 336.13,
+      "monetary_mean": 456.74,
+      "segment_name": "Inactive Low Value",
+      "pct_customers": 63.96
+    },
+    {
+      "cluster": 1,
+      "n_customers": 1299,
+      "recency_median": 17.0,
+      "recency_mean": 28.04,
+      "frequency_median": 5.0,
+      "frequency_mean": 7.31,
+      "monetary_median": 1852.67,
+      "monetary_mean": 3914.83,
+      "segment_name": "Champions",
+      "pct_customers": 36.04
+    }
+  ],
+  "segment_revenue_summary": [
+    {
+      "cluster_label": "Champions",
+      "n_customers": 1299,
+      "total_revenue": 5085365.97,
+      "avg_revenue": 3914.831385681293,
+      "revenue_share_pct": 82.84855366651006,
+      "customer_share_pct": 36.04328523862375
+    },
+    {
+      "cluster_label": "Inactive Low Value",
+      "n_customers": 2305,
+      "total_revenue": 1052780.98,
+      "avg_revenue": 456.73795227765726,
+      "revenue_share_pct": 17.151446333489947,
+      "customer_share_pct": 63.95671476137624
+    }
+  ]
+}

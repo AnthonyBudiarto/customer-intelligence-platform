@@ -1,0 +1,93 @@
+# =============================================================================
+# .gitignore — AI Customer Intelligence Platform
+# =============================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# --- Conda ---
+.conda/
+
+# --- Data (jangan commit data customer) ---
+data/raw/*.xlsx
+data/raw/*.csv
+data/raw/*.xls
+data/processed/*.csv
+data/processed/*.parquet
+data/features/*.csv
+data/features/*.parquet
+
+# --- Artifacts (model files besar) ---
+# Uncomment baris di bawah jika ingin exclude model files
+# artifacts/models/*.pkl
+# artifacts/models/*.joblib
+# artifacts/models/*.pt
+# artifacts/models/*.pth
+
+# --- Secrets & Config lokal ---
+.env
+.env.*
+*.secret
+secrets/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Temp output files dari development ---
+*_out.txt
+*_err.txt
+out.txt
+*.bat
+condaenv.*.requirements.txt
+check_deps.py
+check_out.txt
+check_err.txt
+test_output.txt
+test_error.txt
+phase1_out.txt
+phase1_err.txt
+
+# --- Reports (di-generate, tidak perlu di-commit) ---
+# reports/*.html
+# artifacts/reports/*.json  # Di-commit agar dashboard bisa jalan tanpa rerun
+
+# TETAP commit:
+# - data/raw/README.md (instruksi download dataset)
+# - configs/*.yaml
+# - src/**/*.py
+# - tests/**/*.py
+# - notebooks/*.ipynb
+# - requirements.txt
+# - environment.yml

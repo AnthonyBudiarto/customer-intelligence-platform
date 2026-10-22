@@ -1,0 +1,178 @@
+{
+  "train": {
+    "split": "train",
+    "cutoff": "2011-06-30",
+    "horizon_days": 70,
+    "n_customers": 1977,
+    "n_features": 15,
+    "target_stats": {
+      "cutoff_date": "2011-06-30",
+      "horizon_days": 70,
+      "horizon_end": "2011-09-08",
+      "eligibility_window_days": 90,
+      "eligibility_start": "2011-04-01",
+      "dataset_end": "2011-12-09",
+      "available_followup_days": 162,
+      "n_eligible_customers": 1977,
+      "n_active_label_0": 1006,
+      "n_inactive_label_1": 971,
+      "pct_inactive": 49.11,
+      "class_imbalance_ratio": 1.04
+    },
+    "leakage_check": {
+      "status": "PASS",
+      "n_customers_checked": 1977,
+      "n_customers_with_pre_cutoff_data": 1977,
+      "n_customers_without_any_pre_cutoff_data": 0,
+      "n_negative_recency": 0,
+      "cutoff_date": "2011-06-30",
+      "note": "Fitur dibangun dari transaksi <= cutoff_date. df_modeling mengandung semua periode (normal)."
+    },
+    "target_validation": {
+      "check_labels_in_features": "PASS",
+      "check_no_post_cutoff_in_features": "PASS",
+      "check_no_future_only_customers": "PASS",
+      "n_labels": 1977,
+      "n_features": 1977,
+      "n_labels_with_features": 1977,
+      "overall": "PASS"
+    },
+    "feature_columns": [
+      "recency_days",
+      "frequency",
+      "monetary_total",
+      "monetary_mean",
+      "monetary_std",
+      "avg_qty_per_order",
+      "n_unique_products",
+      "n_unique_months",
+      "tenure_days",
+      "ipt_mean",
+      "ipt_std",
+      "recent_freq_ratio",
+      "spending_trend",
+      "cancellation_rate",
+      "country_UK"
+    ],
+    "missing_values_in_features": {
+      "recency_days": 0,
+      "frequency": 0,
+      "monetary_total": 0,
+      "monetary_mean": 0,
+      "monetary_std": 0,
+      "avg_qty_per_order": 0,
+      "n_unique_products": 0,
+      "n_unique_months": 0,
+      "tenure_days": 0,
+      "ipt_mean": 635,
+      "ipt_std": 635,
+      "recent_freq_ratio": 0,
+      "spending_trend": 0,
+      "cancellation_rate": 0,
+      "country_UK": 0
+    }
+  },
+  "test": {
+    "split": "test",
+    "cutoff": "2011-09-30",
+    "horizon_days": 70,
+    "n_customers": 2124,
+    "n_features": 15,
+    "target_stats": {
+      "cutoff_date": "2011-09-30",
+      "horizon_days": 70,
+      "horizon_end": "2011-12-09",
+      "eligibility_window_days": 90,
+      "eligibility_start": "2011-07-02",
+      "dataset_end": "2011-12-09",
+      "available_followup_days": 70,
+      "n_eligible_customers": 2124,
+      "n_active_label_0": 1343,
+      "n_inactive_label_1": 781,
+      "pct_inactive": 36.77,
+      "class_imbalance_ratio": 1.72
+    },
+    "leakage_check": {
+      "status": "PASS",
+      "n_customers_checked": 2124,
+      "n_customers_with_pre_cutoff_data": 2124,
+      "n_customers_without_any_pre_cutoff_data": 0,
+      "n_negative_recency": 0,
+      "cutoff_date": "2011-09-30",
+      "note": "Fitur dibangun dari transaksi <= cutoff_date. df_modeling mengandung semua periode (normal)."
+    },
+    "target_validation": {
+      "check_labels_in_features": "PASS",
+      "check_no_post_cutoff_in_features": "PASS",
+      "check_no_future_only_customers": "PASS",
+      "n_labels": 2124,
+      "n_features": 2124,
+      "n_labels_with_features": 2124,
+      "overall": "PASS"
+    },
+    "feature_columns": [
+      "recency_days",
+      "frequency",
+      "monetary_total",
+      "monetary_mean",
+      "monetary_std",
+      "avg_qty_per_order",
+      "n_unique_products",
+      "n_unique_months",
+      "tenure_days",
+      "ipt_mean",
+      "ipt_std",
+      "recent_freq_ratio",
+      "spending_trend",
+      "cancellation_rate",
+      "country_UK"
+    ],
+    "missing_values_in_features": {
+      "recency_days": 0,
+      "frequency": 0,
+      "monetary_total": 0,
+      "monetary_mean": 0,
+      "monetary_std": 0,
+      "avg_qty_per_order": 0,
+      "n_unique_products": 0,
+      "n_unique_months": 0,
+      "tenure_days": 0,
+      "ipt_mean": 514,
+      "ipt_std": 514,
+      "recent_freq_ratio": 0,
+      "spending_trend": 0,
+      "cancellation_rate": 0,
+      "country_UK": 0
+    }
+  },
+  "feature_summary": {
+    "feature_columns": [
+      "recency_days",
+      "frequency",
+      "monetary_total",
+      "monetary_mean",
+      "monetary_std",
+      "avg_qty_per_order",
+      "n_unique_products",
+      "n_unique_months",
+      "tenure_days",
+      "ipt_mean",
+      "ipt_std",
+      "recent_freq_ratio",
+      "spending_trend",
+      "cancellation_rate",
+      "country_UK"
+    ],
+    "n_features": 15,
+    "train_class_distribution": {
+      "n_active": 1006,
+      "n_inactive": 971,
+      "pct_inactive": 49.11
+    },
+    "test_class_distribution": {
+      "n_active": 1343,
+      "n_inactive": 781,
+      "pct_inactive": 36.77
+    }
+  }
+}

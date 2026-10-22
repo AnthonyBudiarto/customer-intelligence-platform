@@ -1,0 +1,99 @@
+{
+  "basic_info": {
+    "n_rows": 541909,
+    "n_columns": 8,
+    "columns": [
+      "InvoiceNo",
+      "StockCode",
+      "Description",
+      "Quantity",
+      "InvoiceDate",
+      "UnitPrice",
+      "CustomerID",
+      "Country"
+    ],
+    "memory_mb": 187.78
+  },
+  "missing_values": {
+    "missing_count": {
+      "InvoiceNo": 0,
+      "StockCode": 0,
+      "Description": 1454,
+      "Quantity": 0,
+      "InvoiceDate": 0,
+      "UnitPrice": 0,
+      "CustomerID": 135080,
+      "Country": 0
+    },
+    "missing_pct": {
+      "InvoiceNo": 0.0,
+      "StockCode": 0.0,
+      "Description": 0.27,
+      "Quantity": 0.0,
+      "InvoiceDate": 0.0,
+      "UnitPrice": 0.0,
+      "CustomerID": 24.93,
+      "Country": 0.0
+    },
+    "rows_with_null_customer_id": 135080,
+    "pct_null_customer_id": 24.93
+  },
+  "duplicates": {
+    "n_duplicate_rows": 5268,
+    "pct_duplicate_rows": 0.97
+  },
+  "date_range": {
+    "date_min": "2010-12-01 08:26:00",
+    "date_max": "2011-12-09 12:50:00",
+    "date_range_days": 373,
+    "n_unique_months": 13,
+    "n_invalid_dates": 0
+  },
+  "cancelled_invoices": {
+    "n_cancelled_rows": 9288,
+    "pct_cancelled_rows": 1.71,
+    "n_cancelled_invoices": 3836,
+    "n_customers_with_cancellations": 1589,
+    "total_cancelled_quantity": -277574,
+    "total_cancelled_value": -896812.49
+  },
+  "quantity_issues": {
+    "n_negative_quantity_non_cancelled": 1336,
+    "n_zero_quantity": 0,
+    "quantity_min": -80995.0,
+    "quantity_max": 80995.0,
+    "quantity_p99": 100.0
+  },
+  "price_issues": {
+    "n_zero_price": 2515,
+    "n_negative_price": 2,
+    "price_min": -11062.06,
+    "price_max": 38970.0,
+    "price_p99": 18.0
+  },
+  "customer_coverage": {
+    "n_unique_customers_with_id": 4372,
+    "tx_per_customer_mean": 5.08,
+    "tx_per_customer_median": 3.0,
+    "tx_per_customer_max": 248,
+    "pct_customers_single_tx": 30.03,
+    "pct_customers_ge2_tx": 69.97,
+    "n_unique_countries": 38,
+    "top_countries": {
+      "United Kingdom": 495478,
+      "Germany": 9495,
+      "France": 8557,
+      "EIRE": 8196,
+      "Spain": 2533
+    }
+  },
+  "revenue_overview": {
+    "total_gross_revenue": 8911407.9,
+    "n_valid_line_items": 397884,
+    "revenue_per_line_mean": 22.4,
+    "revenue_per_line_median": 11.8,
+    "revenue_per_line_p99": 202.5,
+    "revenue_per_line_max": 168469.6,
+    "n_extreme_lines_gt10k": 3
+  }
+}

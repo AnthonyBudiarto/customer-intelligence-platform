@@ -1,0 +1,3 @@
+cluster,n_customers,recency_median,recency_mean,frequency_median,frequency_mean,monetary_median,monetary_mean,segment_name,pct_customers
+0,2305,116.0,128.07,1.0,1.56,336.13,456.74,Inactive Low Value,63.96
+1,1299,17.0,28.04,5.0,7.31,1852.67,3914.83,Champions,36.04

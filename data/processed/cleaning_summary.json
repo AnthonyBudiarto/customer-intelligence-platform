@@ -1,0 +1,76 @@
+{
+  "analysis": {
+    "initial_rows": 541909,
+    "final_rows": 401604,
+    "pct_retained": 74.11,
+    "steps": [
+      {
+        "step": "parse_date",
+        "rows_before": 541909,
+        "rows_after": 541909,
+        "rows_removed": 0
+      },
+      {
+        "step": "remove_duplicates",
+        "rows_before": 541909,
+        "rows_after": 536641,
+        "rows_removed": 5268
+      },
+      {
+        "step": "remove_null_customerid",
+        "rows_before": 536641,
+        "rows_after": 401604,
+        "rows_removed": 135037
+      },
+      {
+        "step": "remove_negative_price",
+        "rows_before": 401604,
+        "rows_after": 401604,
+        "rows_removed": 0
+      }
+    ]
+  },
+  "modeling": {
+    "initial_rows": 541909,
+    "final_rows": 392688,
+    "pct_retained": 72.46,
+    "steps": [
+      {
+        "step": "parse_date",
+        "rows_before": 541909,
+        "rows_after": 541909,
+        "rows_removed": 0
+      },
+      {
+        "step": "remove_duplicates",
+        "rows_before": 541909,
+        "rows_after": 536641,
+        "rows_removed": 5268
+      },
+      {
+        "step": "remove_null_customerid",
+        "rows_before": 536641,
+        "rows_after": 401604,
+        "rows_removed": 135037
+      },
+      {
+        "step": "remove_cancelled",
+        "rows_before": 401604,
+        "rows_after": 392732,
+        "rows_removed": 8872
+      },
+      {
+        "step": "remove_invalid_quantity",
+        "rows_before": 392732,
+        "rows_after": 392732,
+        "rows_removed": 0
+      },
+      {
+        "step": "remove_invalid_price",
+        "rows_before": 392732,
+        "rows_after": 392688,
+        "rows_removed": 44
+      }
+    ]
+  }
+}

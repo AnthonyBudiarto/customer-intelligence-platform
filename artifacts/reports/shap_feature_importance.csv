@@ -1,0 +1,16 @@
+feature,importance
+n_unique_months,0.24787134
+frequency,0.24183446
+monetary_total,0.05919478
+ipt_mean,0.046594117
+spending_trend,0.042692047
+ipt_std,0.0401555
+avg_qty_per_order,0.038533438
+tenure_days,0.038286276
+monetary_std,0.037676856
+monetary_mean,0.037585486
+cancellation_rate,0.035784796
+recent_freq_ratio,0.03460896
+n_unique_products,0.034238286
+recency_days,0.03275653
+country_UK,0.032187223

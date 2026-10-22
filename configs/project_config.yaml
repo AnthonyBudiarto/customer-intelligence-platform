@@ -1,0 +1,150 @@
+# =============================================================================
+# PROJECT CONFIGURATION
+# AI-Powered Customer Intelligence & Retention Platform
+# =============================================================================
+# Semua parameter temporal, eligibility, dan path dikonfigurasi di sini.
+# Ubah nilai di file ini; jangan hardcode di notebook atau src.
+
+project:
+  name: "AI-Powered Customer Intelligence & Retention Platform"
+  version: "1.0.0"
+  random_seed: 42
+
+# -----------------------------------------------------------------------------
+# PATH CONFIGURATION
+# -----------------------------------------------------------------------------
+paths:
+  raw_data: "data/raw/Online Retail.xlsx"
+  processed_data: "data/processed/"
+  features_data: "data/features/"
+  artifacts: "artifacts/"
+  reports: "reports/"
+  plots: "artifacts/plots/"
+
+# -----------------------------------------------------------------------------
+# TEMPORAL DESIGN
+# Nilai awal — akan difinalisasi setelah audit data (Fase 1B)
+# -----------------------------------------------------------------------------
+temporal:
+  # Tanggal minimum yang dianggap valid dalam dataset
+  dataset_start: "2010-12-01"
+  # Tanggal maksimum dataset (akan diverifikasi dari data aktual)
+  dataset_end: "2011-12-09"
+
+  # Prediction cutoff: tanggal "hari ini" saat prediksi dibuat
+  # KEPUTUSAN FINAL (divalidasi di Fase 2B):
+  # cutoff=2011-09-30, horizon=70d -> 2,124 eligible, 36.8% inactive, full follow-up tersedia
+  prediction_cutoff: "2011-09-30"
+
+  # Observation window: periode historis untuk membangun fitur customer
+  observation_start: "2010-12-01"
+  observation_end: "2011-09-30"
+
+  # Prediction horizon: 70 hari (bukan 90) karena data berakhir 09 Des 2011
+  # cutoff 30 Sep + 70 hari = 08 Des 2011 < 09 Des 2011 (dataset end)
+  horizon_days: 70
+
+  # Inactivity threshold: sama dengan horizon
+  inactivity_threshold_days: 70
+
+  # Customer eligibility: minimum transaksi valid dalam X hari sebelum cutoff
+  eligibility_window_days: 90
+  eligibility_min_transactions: 1
+
+# -----------------------------------------------------------------------------
+# DATA CLEANING RULES
+# -----------------------------------------------------------------------------
+cleaning:
+  # Invoice yang dibatalkan diidentifikasi dari prefix 'C'
+  cancelled_invoice_prefix: "C"
+
+  # Batas minimum quantity yang dianggap valid
+  min_quantity: 1
+
+  # Batas minimum unit price yang dianggap valid
+  min_unit_price: 0.01
+
+  # Kolom yang wajib ada nilainya (tidak boleh null)
+  required_columns:
+    - "CustomerID"
+    - "InvoiceDate"
+    - "InvoiceNo"
+    - "StockCode"
+    - "Quantity"
+    - "UnitPrice"
+
+  # Hapus duplikat baris identik
+  remove_duplicates: true
+
+  # Threshold revenue per transaksi untuk investigasi outlier (GBP)
+  outlier_revenue_threshold: 10000
+
+# -----------------------------------------------------------------------------
+# RFM CONFIGURATION
+# -----------------------------------------------------------------------------
+rfm:
+  # Jumlah bins untuk scoring (1-5 scale)
+  n_bins: 5
+  # Log transform sebelum scaling
+  log_transform: true
+
+# -----------------------------------------------------------------------------
+# CLUSTERING CONFIGURATION
+# -----------------------------------------------------------------------------
+clustering:
+  algorithm: "kmeans"
+  k_range: [2, 10]
+  n_init: 10
+  max_iter: 300
+  # Jumlah cluster final (difinalisasi setelah evaluasi silhouette)
+  n_clusters_final: 4
+
+# -----------------------------------------------------------------------------
+# MODEL CONFIGURATION
+# -----------------------------------------------------------------------------
+models:
+  # Chronological split boundaries
+  train_end: "2011-06-30"
+  validation_end: "2011-09-30"
+  # test: prediction_cutoff + horizon (diset otomatis)
+
+  class_weight: "balanced"
+
+  logistic_regression:
+    max_iter: 1000
+    C: 1.0
+    solver: "lbfgs"
+
+  random_forest:
+    n_estimators: 200
+    max_depth: 10
+    min_samples_leaf: 5
+
+  xgboost:
+    n_estimators: 300
+    learning_rate: 0.05
+    max_depth: 6
+    subsample: 0.8
+    colsample_bytree: 0.8
+
+  mlp:
+    hidden_layers: [128, 64, 32]
+    dropout: 0.3
+    learning_rate: 0.001
+    batch_size: 64
+    max_epochs: 100
+    patience: 10  # early stopping
+
+# -----------------------------------------------------------------------------
+# EVALUATION METRICS
+# -----------------------------------------------------------------------------
+evaluation:
+  primary_metric: "pr_auc"
+  threshold_strategy: "f1_optimal"  # threshold dipilih dari validation set
+  report_metrics:
+    - "precision"
+    - "recall"
+    - "f1"
+    - "pr_auc"
+    - "roc_auc"
+    - "balanced_accuracy"
