@@ -14,7 +14,7 @@ Proyek Data Science end-to-end untuk prediksi inaktivitas pelanggan, segmentasi 
 | XGBoost | 0.697 | 0.527 | 0.512 |
 | **MLP (PyTorch)** | **0.733** | **0.569** | **0.620** |
 
-**Kesimpulan:** ML model memberikan peningkatan bermakna dibanding rule-based baseline (+14% PR-AUC). MLP dan Logistic Regression hampir setara — kesederhanaan Logistic Regression menjadi argumen kuat untuk deployment.
+**Kesimpulan:** ML model memberikan peningkatan bermakna dibanding rule-based baseline (+14% PR-AUC). MLP dan Logistic Regression hampir setara, kesederhanaan Logistic Regression menjadi argumen kuat untuk deployment.
 
 **Top fitur prediktif:** n_unique_months (42%), frequency (24%), monetary_total (6%)
 
