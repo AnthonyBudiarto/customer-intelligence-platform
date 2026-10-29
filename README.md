@@ -25,7 +25,7 @@ Proyek Data Science end-to-end untuk prediksi inaktivitas pelanggan, segmentasi 
 - **Sumber:** [UCI Online Retail Dataset](https://archive.uci.edu/dataset/352/online+retail)
 - **Periode:** 01 Desember 2010 – 09 Desember 2011
 - **Raw:** 541,909 transaksi | 4,372 pelanggan teridentifikasi
-- **Tidak diikutsertakan dalam repo** — lihat `data/raw/README.md` untuk instruksi unduh
+- **Tidak diikutsertakan dalam repo**, lihat `data/raw/README.md` untuk instruksi unduh
 
 ---
 
@@ -144,11 +144,11 @@ K-Means dengan k=2 (silhouette=0.430):
 
 ## Limitasi Penting
 
-- Data 2010-2011 — tidak representatif untuk e-commerce modern
-- Satu snapshot temporal — stabilitas model tidak terukur
+- Data 2010-2011: tidak representatif untuk e-commerce modern
+- Satu snapshot temporal: stabilitas model tidak terukur
 - 25% transaksi tidak memiliki CustomerID (bias seleksi)
-- "Inaktivitas" ≠ churn — pelanggan mungkin membeli di saluran lain
-- Prediksi tidak kausal — intervensi memerlukan eksperimen terkontrol
+- "Inaktivitas" ≠ churn: pelanggan mungkin membeli di saluran lain
+- Prediksi tidak kausal: intervensi memerlukan eksperimen terkontrol
 
 ---
 
